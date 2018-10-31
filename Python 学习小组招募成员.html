@@ -1,0 +1,815 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>@font-face {
+  font-family: octicons-anchor;
+  src: url(https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/font/octicons.woff) format('woff');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 980px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+body .markdown-body {
+    padding: 45px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    word-wrap: break-word;
+}
+
+pre {
+    font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  color: #333;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background-color: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body input {
+  font: 13px / 1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.markdown-body a {
+  color: #4078c0;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body .select::-ms-expand {
+  opacity: 0;
+}
+
+.markdown-body .octicon {
+  font: normal normal normal 16px/1 octicons-anchor;
+  display: inline-block;
+  text-decoration: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.markdown-body .octicon-link:before {
+  content: '\f05c';
+}
+
+.markdown-body:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body .anchor {
+  display: inline-block;
+  padding-right: 2px;
+  margin-left: -18px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #000;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h1 .anchor {
+  line-height: 1;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 .anchor {
+  line-height: 1;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h3 .anchor {
+  line-height: 1.2;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h4 .anchor {
+  line-height: 1.2;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h5 .anchor {
+  line-height: 1.1;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body h6 .anchor {
+  line-height: 1.1;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: content-box;
+  background-color: #fff;
+}
+
+.markdown-body code {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+
+.markdown-body .pl-c {
+  color: #969896;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #0086b3;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #795da3;
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+  color: #333;
+}
+
+.markdown-body .pl-ent {
+  color: #63a35c;
+}
+
+.markdown-body .pl-k {
+  color: #a71d5d;
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+  color: #183691;
+}
+
+.markdown-body .pl-v {
+  color: #ed6a43;
+}
+
+.markdown-body .pl-id {
+  color: #b52a1d;
+}
+
+.markdown-body .pl-ii {
+  background-color: #b52a1d;
+  color: #f8f8f8;
+}
+
+.markdown-body .pl-sr .pl-cce {
+  color: #63a35c;
+  font-weight: bold;
+}
+
+.markdown-body .pl-ml {
+  color: #693a17;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  color: #1d3e81;
+  font-weight: bold;
+}
+
+.markdown-body .pl-mq {
+  color: #008080;
+}
+
+.markdown-body .pl-mi {
+  color: #333;
+  font-style: italic;
+}
+
+.markdown-body .pl-mb {
+  color: #333;
+  font-weight: bold;
+}
+
+.markdown-body .pl-md {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.markdown-body .pl-mi1 {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.markdown-body .pl-mdr {
+  color: #795da3;
+  font-weight: bold;
+}
+
+.markdown-body .pl-mo {
+  color: #1d3e81;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+
+.markdown-body .plan-price-unit {
+  color: #767676;
+  font-weight: normal;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 0.35em 0.25em -1.6em;
+  vertical-align: middle;
+}
+
+.markdown-body .plan-choice {
+  padding: 15px;
+  padding-left: 40px;
+  display: block;
+  border: 1px solid #e0e0e0;
+  position: relative;
+  font-weight: normal;
+  background-color: #fafafa;
+}
+
+.markdown-body .plan-choice.open {
+  background-color: #fff;
+}
+
+.markdown-body .plan-choice.open .plan-choice-seat-breakdown {
+  display: block;
+}
+
+.markdown-body .plan-choice-free {
+  border-radius: 3px 3px 0 0;
+}
+
+.markdown-body .plan-choice-paid {
+  border-radius: 0 0 3px 3px;
+  border-top: 0;
+  margin-bottom: 20px;
+}
+
+.markdown-body .plan-choice-radio {
+  position: absolute;
+  left: 15px;
+  top: 18px;
+}
+
+.markdown-body .plan-choice-exp {
+  color: #999;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.markdown-body .plan-choice-seat-breakdown {
+  margin-top: 10px;
+  display: none;
+}
+
+.markdown-body :checked+.radio-label {
+  z-index: 1;
+  position: relative;
+  border-color: #4078c0;
+}
+
+@media print {
+  body .markdown-body {
+    padding: 0;
+    border: none;
+  }
+}
+</style><title>Python 学习小组招募成员</title></head><body><article class="markdown-body"><h1>
+<a id="user-content-简介" class="anchor" href="#%E7%AE%80%E4%BB%8B" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>简介</h1>
+<p>作为一个 Python2 时代的程序员，虽然它的字符集很烦，但我很喜欢这个语言，也用它解决过不少工作上的问题，包括 web 开发、服务器端工具、文档转换服务等…</p>
+<p>后来，有了不向下兼容的 Python3，用的就更烦了，多数库仅支持py2，少数库仅支持py3，我就用的比较少了。直到这两年，Python 就像一个重病人，趁着大数据的风靡，喘活了一口气不说，还青云直上扬眉吐气了。</p>
+<p>所以，我在PHP课程体系成熟的基础上，打算系统性的补学一下Python，顺便筹备一个学习小组，带大家一起学。</p>
+<h1>
+<a id="user-content-这仅仅是一个学习小组" class="anchor" href="#%E8%BF%99%E4%BB%85%E4%BB%85%E6%98%AF%E4%B8%80%E4%B8%AA%E5%AD%A6%E4%B9%A0%E5%B0%8F%E7%BB%84" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>这仅仅是一个学习小组</h1>
+<p>在我看来，如果对一门语言没有达到融会贯通，就贸然授课是不负责任的。会使用这个语言和「深入浅出」的进行讲解，是两个概念。</p>
+<p><strong>所以，我自己也在学习</strong></p>
+<p>组建学习小组，取决于以下因素：</p>
+<ul>
+<li>把知识讲给别人听，是优秀的学习方法</li>
+<li>跟踪别人的学习过程，才能做好自己的课程</li>
+<li>给「内容创业者」增加一点收入</li>
+</ul>
+<p><strong>这样，对同学们公平吗？</strong></p>
+<p>首先，我对Python并非零基础，我看网上有些Python讲师的水平似乎还不如我，所以带带同学们还是足够的。</p>
+<p>其次，从PHP的课程中，我基本已经建立了成熟的授课体系，换一种语言，无非就是换一个语法、生态而已。</p>
+<p>重点，价格很低，半年时间跟着我的节奏，Python 入门与实战是妥妥的，只要你把时间用上，学成下车是没问题的。</p>
+<h1>
+<a id="user-content-学习小组都学什么" class="anchor" href="#%E5%AD%A6%E4%B9%A0%E5%B0%8F%E7%BB%84%E9%83%BD%E5%AD%A6%E4%BB%80%E4%B9%88" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>学习小组都学什么？</h1>
+<ul>
+<li>安装配置，基于 pipenv</li>
+<li>基础语法与实践技巧（参考Python之禅）</li>
+<li>标准库实践</li>
+<li>第三方库实践</li>
+<li>数据挖掘方向，基于beautifulsoup、scrapy</li>
+<li>web 方向，flask django 二选一</li>
+<li>阅读知名开源项目，提升自己专业级别</li>
+<li>至少会有2-3个项目的实践（因为我们时间长）</li>
+</ul>
+<h1>
+<a id="user-content-我带着学习小组做什么" class="anchor" href="#%E6%88%91%E5%B8%A6%E7%9D%80%E5%AD%A6%E4%B9%A0%E5%B0%8F%E7%BB%84%E5%81%9A%E4%BB%80%E4%B9%88" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>我带着学习小组做什么？</h1>
+<p>我会定制知识树、学习节奏，大家可以遵循我的过程前进。过程中碰到问题我会组织讨论和查阅资料确认。</p>
+<p>注意：学习小组非「师生关系」，互动、互助为主；每个参与者都务必主动钻研而不是张嘴等喂。</p>
+<ul>
+<li>定制学习路径</li>
+<li>互相监督、打卡鼓励</li>
+<li>解读文档，包括官方与其他渠道</li>
+<li>录制课程（有必要的知识点）</li>
+<li>项目开发（需求、开发、部署）</li>
+<li>阶段总结</li>
+<li>答疑解惑</li>
+</ul>
+<h1>
+<a id="user-content-用什么方式交流" class="anchor" href="#%E7%94%A8%E4%BB%80%E4%B9%88%E6%96%B9%E5%BC%8F%E4%BA%A4%E6%B5%81" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>用什么方式交流？</h1>
+<p>我建了一个微信群，日常可以在群内交流。</p>
+<p>我建了一个git库，大家一起编写学习资料，互相共享，求证。</p>
+<p>偶尔会开直播，不定期，看情况。</p>
+<h1>
+<a id="user-content-会不会半途而废" class="anchor" href="#%E4%BC%9A%E4%B8%8D%E4%BC%9A%E5%8D%8A%E9%80%94%E8%80%8C%E5%BA%9F" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>会不会半途而废？</h1>
+<p>我是一个很有韧性的人。</p>
+<ul>
+<li>公众号写了400+篇文章</li>
+<li>学英语连续坚持了198天（一天不断）</li>
+<li>工作时最高 9个月 不请假，不迟到，不早退。</li>
+</ul>
+<p>类似的战绩太多，我就不一一掰扯了，我是肯定会通关的，只要你不跑路，肯定也行。</p>
+<h1>
+<a id="user-content-什么时候开始" class="anchor" href="#%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E5%BC%80%E5%A7%8B" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>什么时候开始？</h1>
+<p>2018.11.1 正式开始。</p>
+<p>2019.05.1 正式结束。</p>
+<p>10月31日是报名最后截止点，中途不停车，不能半路上车。</p>
+<h1>
+<a id="user-content-现在有多少人" class="anchor" href="#%E7%8E%B0%E5%9C%A8%E6%9C%89%E5%A4%9A%E5%B0%91%E4%BA%BA" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>现在有多少人？</h1>
+<ul>
+<li>我，带领学习小组</li>
+<li>特邀嘉宾，python从业者，提供实战建议</li>
+<li>实验室已结业学员（10余人）</li>
+</ul>
+<p>最多也就保证10余人的规模，所以名额也不多..</p>
+<h1>
+<a id="user-content-每天用多少时间学习" class="anchor" href="#%E6%AF%8F%E5%A4%A9%E7%94%A8%E5%A4%9A%E5%B0%91%E6%97%B6%E9%97%B4%E5%AD%A6%E4%B9%A0" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>每天用多少时间学习？</h1>
+<p>我每周大约会抽出3个半天时间学习。对其他同学，建议每天1小时。</p>
+<p>学习，不怕慢，就怕停。共勉之…</p>
+<h1>
+<a id="user-content-如何加入" class="anchor" href="#%E5%A6%82%E4%BD%95%E5%8A%A0%E5%85%A5" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>如何加入？</h1>
+<ul>
+<li>至少掌握一门其他语言（我不想解释什么是变量）</li>
+<li>会费：800元（一次性支付）</li>
+</ul>
+<h1>
+<a id="user-content-找谁加入" class="anchor" href="#%E6%89%BE%E8%B0%81%E5%8A%A0%E5%85%A5" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>找谁加入？</h1>
+<p>微信 pmtt9121（至少要掌握一门语言，最好是PHP，这个没有商量的余地）</p>
+</article></body></html>
